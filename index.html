@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTrack | Student Career Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2 class="brand">Skill<span>Track</span></h2>
+      <p class="side-label">WORKSPACE</p>
+
+      <button class="nav active" data-page="dashboard">⌂ Dashboard</button>
+      <button class="nav" data-page="skills">⚡ My Skills</button>
+      <button class="nav" data-page="roadmap">♧ Career Roadmap</button>
+      <button class="nav" data-page="projects">▣ Projects</button>
+      <button class="nav" data-page="certificates">🏆 Certificates</button>
+
+      <div class="sidebar-bottom">
+        <p>YOUR FUTURE STARTS HERE</p>
+        <small>Learn. Build. Get Hired.</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">STUDENT CAREER HUB</p>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+        <div class="user">
+          <div class="avatar">S</div>
+          <div><strong id="user-name">Student</strong><small>B.Tech · CSE</small></div>
+        </div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="welcome">
+          <div>
+            <p class="eyebrow">YOUR JOURNEY TO SUCCESS</p>
+            <h2>Build skills. Shape your future.</h2>
+            <p>Track your learning, projects and placement preparation in one place.</p>
+            <button class="primary" data-go="skills">Explore my skills →</button>
+          </div>
+          <div class="welcome-icon">🚀</div>
+        </div>
+
+        <div class="stats">
+          <article class="stat-card">
+            <span>Skills Tracked</span><strong id="skill-count">0</strong>
+            <small>Technologies to learn</small>
+          </article>
+          <article class="stat-card">
+            <span>Projects Built</span><strong id="project-count">0</strong>
+            <small>Your practical work</small>
+          </article>
+          <article class="stat-card">
+            <span>Certificates</span><strong id="cert-count">0</strong>
+            <small>Your achievements</small>
+          </article>
+          <article class="stat-card">
+            <span>Placement Readiness</span><strong id="readiness">0%</strong>
+            <small>Based on your progress</small>
+          </article>
+        </div>
+
+        <div class="columns">
+          <article class="panel">
+            <div class="panel-heading">
+              <div><h3>Skill Progress</h3><p>Keep learning every day</p></div>
+              <button class="text-btn" data-go="skills">View all →</button>
+            </div>
+            <div id="dashboard-skills"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading">
+              <div><h3>Placement Checklist</h3><p>Prepare for your dream job</p></div>
+            </div>
+            <div id="checklist"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="skills">
+        <div class="section-intro">
+          <h2>My Skills</h2>
+          <p>Update your skill levels as you learn.</p>
+        </div>
+        <article class="panel">
+          <div id="all-skills"></div>
+        </article>
+      </section>
+
+      <section class="page" id="roadmap">
+        <div class="section-intro">
+          <h2>Your Career Roadmap</h2>
+          <p>Follow these steps toward a software development career.</p>
+        </div>
+        <div id="roadmap-list" class="roadmap-list"></div>
+      </section>
+
+      <section class="page" id="projects">
+        <div class="section-intro">
+          <h2>My Projects</h2>
+          <p>Record the projects you build.</p>
+        </div>
+        <form id="project-form" class="panel form-panel">
+          <label for="project-name">Project name</label>
+          <input id="project-name" placeholder="e.g. Portfolio Website" required>
+          <label for="project-tech">Technology</label>
+          <input id="project-tech" placeholder="e.g. HTML, CSS, JavaScript" required>
+          <button class="primary" type="submit">+ Add Project</button>
+        </form>
+        <div id="project-list" class="item-grid"></div>
+      </section>
+
+      <section class="page" id="certificates">
+        <div class="section-intro">
+          <h2>My Certificates</h2>
+          <p>Keep a record of courses you have completed.</p>
+        </div>
+        <form id="certificate-form" class="panel form-panel">
+          <label for="cert-name">Certificate / Course name</label>
+          <input id="cert-name" placeholder="e.g. JavaScript Basics" required>
+          <label for="cert-provider">Issued by</label>
+          <input id="cert-provider" placeholder="e.g. Coursera" required>
+          <button class="primary" type="submit">+ Add Certificate</button>
+        </form>
+        <div id="certificate-list" class="item-grid"></div>
+      </section>
+
+      <footer>SkillTrack © 2026 · Your career, your progress.</footer>
+    </main>
+  </div>
+</body>
+</html>
